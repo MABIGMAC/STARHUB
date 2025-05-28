@@ -1,9 +1,13 @@
-import { Button } from 'antd'
+import { Canvas } from '@react-three/fiber'
+
+import { Experience } from './components/Experience'
 
 function App() {
 	return (
-		<div className="App">
-			<Button type="primary">Button</Button>
+		<div style={{ height: '100vh', width: '100vw' }}>
+			<Canvas>
+				<Experience />
+			</Canvas>
 		</div>
 	)
 }
