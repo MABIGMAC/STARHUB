@@ -25,8 +25,8 @@
 
 		/* Paths */
 		"paths": {
-		"@/*": ["./src/*"],
-		"~shared/*": ["../shared/src/*"]
+			"@/*": ["./src/*"],
+			"~shared/*": ["../shared/src/*"]
 		}
 	},
 	"include": ["src"]
