@@ -18,7 +18,7 @@ export const Keyboard = (props) => {
 	const tl = useRef()
 
 	useFrame(() => {
-		tl.current.seek(scroll.offset * tl.current.duration())
+		tl.current.progress(scroll.offset)
 	})
 
 	useLayoutEffect(() => {
