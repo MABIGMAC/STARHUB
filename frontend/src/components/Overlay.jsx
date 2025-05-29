@@ -1,23 +1,39 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Scroll } from '@react-three/drei'
+import { Card } from 'antd'
 
 import { Section } from './UI/Section'
+
+import starlablogo from '@/assets/starlablogo.svg'
 
 export const Overlay = () => {
 	return (
 		<Scroll html>
-			<Section backgroundColor="#f0f0f0">
-				<h1>Hello world!</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget
-					aliquam massa nisl quis neque. Sed vitae sapien nec sapien cursus
-					dictum. Mauris euismod, sapien eu commodo cursus, nisi nisl aliquam
-					nunc, eget aliquam massa nisl quis neque. Sed vitae sapien nec sapien
-					cursus dictum.
-				</p>
-			</Section>
-			<Section backgroundColor="#762B6E">
+			<section
+				style={{
+					height: '90vh',
+					display: 'flex', // enable horizontal layout
+					flexDirection: 'row', // align items left to right
+					alignItems: 'center', // vertically center content
+					justifyContent: 'space-between', // space out left and right sides
+					padding: '5vh 1vw',
+				}}
+			>
+				<img
+					src={starlablogo}
+					alt="Starlab Logo"
+					style={{ alignSelf: 'start' }}
+				/>
+
+				<Card
+					variant="borderless"
+					style={{ backgroundColor: 'transparent', color: 'white' }}
+				>
+					<h1>Hello world!</h1>
+					Welcome to STARLAB, where we show you just how far we can go together
+				</Card>
+			</section>
+			<Section align="right">
 				<h1>Hello world!</h1>
 				<p>
 					Phasellus euismod, urna eu tincidunt consectetur, nisi nisl aliquam
@@ -28,12 +44,8 @@ export const Overlay = () => {
 				</p>
 			</Section>
 			<Section>
-				<h1>Hello world!</h1>
-				<p>
-					Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-					Proin eget tortor risus. Nulla porttitor accumsan tincidunt.
-					Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-				</p>
+				<h1>And if you think you can do better</h1>
+				<p>You can kiss my ass</p>
 			</Section>
 			<Section>
 				<h1>Hello world!</h1>

@@ -48,7 +48,7 @@ export const Starboy = (props) => {
 				starboyref.current.rotation,
 				{
 					x: 0.2, // example rotation
-					y: -0.4,
+					y: -0.8,
 					z: 0.09,
 					duration: 1,
 					ease: 'power2.inOut',
@@ -94,7 +94,7 @@ export const Starboy = (props) => {
 				ref={starboyref}
 				object={scene}
 				{...props}
-				position={[0, -5, -10]}
+				position={[7, -5, -40]}
 				rotation={[0, 0, 0]}
 				zoom={1}
 				scale={1}

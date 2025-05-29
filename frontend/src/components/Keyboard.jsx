@@ -46,10 +46,10 @@ export const Keyboard = (props) => {
 			<primitive
 				object={scene}
 				{...props}
-				position={[0, 0, 0]}
+				position={[0, -5, -10]}
 				rotation={[0, 0, 0]}
 				zoom={1}
-				scale={5}
+				scale={100}
 				dispose={null}
 			/>
 		</group>
