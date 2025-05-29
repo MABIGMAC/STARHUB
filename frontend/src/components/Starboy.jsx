@@ -1,0 +1,105 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
+import { useGLTF, useScroll } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import gsap from 'gsap'
+import { useLayoutEffect, useRef } from 'react'
+
+import KeyboardGLB from '@/assets/models/starboy.glb'
+
+export const Starboy = (props) => {
+	const { scene } = useGLTF(KeyboardGLB)
+
+	const scroll = useScroll()
+
+	const ref = useRef()
+	const starboyref = useRef()
+	const tl = useRef()
+
+	useFrame(() => {
+		tl.current.progress(scroll.offset)
+	})
+
+	useLayoutEffect(() => {
+		tl.current = gsap.timeline()
+
+		tl.current
+			.to(starboyref.current.position, {
+				x: -10,
+				y: -30,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(
+				starboyref.current.scale,
+				{
+					x: 5,
+					y: 5,
+					z: 5,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<', // Starts at the same time as position
+			)
+			.to(
+				starboyref.current.rotation,
+				{
+					x: 0.2, // example rotation
+					y: -0.4,
+					z: 0.09,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<',
+			)
+			.to(starboyref.current.rotation, {
+				x: 0, // example rotation
+				y: 2.3,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(
+				starboyref.current.position,
+				{
+					x: 20,
+					y: -30,
+					z: 0,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<',
+			)
+			.to(
+				starboyref.current.scale,
+				{
+					x: 20,
+					y: 20,
+					z: 20,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<', // Starts at the same time as position
+			)
+	}, [])
+
+	console.log('ref.current.rotation', ref.current?.rotation)
+
+	return (
+		<group {...props} dispose={null} ref={ref}>
+			<primitive
+				ref={starboyref}
+				object={scene}
+				{...props}
+				position={[0, -5, -10]}
+				rotation={[0, 0, 0]}
+				zoom={1}
+				scale={1}
+				dispose={null}
+			/>
+		</group>
+	)
+}
