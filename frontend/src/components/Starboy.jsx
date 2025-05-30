@@ -94,7 +94,7 @@ export const Starboy = (props) => {
 				ref={starboyref}
 				object={scene}
 				{...props}
-				position={[7, -5, -40]}
+				position={[11.5, -5, -45]}
 				rotation={[0, 0, 0]}
 				zoom={1}
 				scale={1}
