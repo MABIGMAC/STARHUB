@@ -48,12 +48,8 @@ export const Overlay = () => {
 				<p>You can kiss my ass</p>
 			</Section>
 			<Section>
-				<h1>Hello world!</h1>
-				<p>
-					Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-					Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor
-					eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada.
-				</p>
+				<h1>Contact Us</h1>
+				<p>Boom</p>
 			</Section>
 			<Section>
 				<h1>Hello world!</h1>
