@@ -1,9 +1,9 @@
 import { ScrollControls, Stars } from '@react-three/drei'
 
 // import { DebugCamera } from './DebugCamera'
-// import { Keyboard } from './Keyboard'
+import { Keyboard } from './Models/Keyboard'
+import { Starboy } from './Models/Starboy'
 import { Overlay } from './Overlay'
-import { Starboy } from './Starboy'
 
 export const Experience = () => {
 	return (
@@ -12,9 +12,9 @@ export const Experience = () => {
 			<ambientLight intensity={0.5} />
 			<Stars />
 			<directionalLight position={[5, 10, 5]} intensity={2} />
-			<ScrollControls pages={3} damping={0.5}>
+			<ScrollControls pages={4} damping={0.5}>
 				<Overlay />
-				{/* <Keyboard /> */}
+				<Keyboard />
 				<Starboy />
 			</ScrollControls>
 			{/* <DebugCamera /> */}

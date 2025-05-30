@@ -27,26 +27,86 @@ export const Keyboard = (props) => {
 		tl.current
 			.to(ref.current.position, {
 				x: 0,
-				y: 2,
-				z: 4.3,
-				duration: 1,
-				ease: 'power2.inOut',
-			})
-			.to(ref.current.position, {
-				x: 2,
-				y: 0,
+				y: -100,
 				z: 0,
 				duration: 1,
 				ease: 'power2.inOut',
 			})
+			.to(ref.current.position, {
+				x: 0,
+				y: -100,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(ref.current.position, {
+				x: 0,
+				y: -100,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(
+				ref.current.scale,
+				{
+					x: 1,
+					y: 1,
+					z: 1,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<', // Starts at the same time as position
+			)
+			.to(
+				ref.current.rotation,
+				{
+					x: 0,
+					y: 0,
+					z: 0,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<',
+			)
+			.to(ref.current.position, {
+				x: 40,
+				y: -50,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(
+				ref.current.rotation,
+				{
+					x: 0,
+					y: 4.9,
+					z: 0,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<',
+			)
+			.to(
+				ref.current.scale,
+				{
+					x: 1000,
+					y: 1000,
+					z: 1000,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<', // Starts at the same time as position
+			)
 	}, [])
 
 	return (
-		<group {...props} dispose={null} ref={ref}>
+		<group {...props} dispose={null}>
+			{/* <OrbitControls /> */}
 			<primitive
+				ref={ref}
 				object={scene}
 				{...props}
-				position={[0, -5, -10]}
+				position={[0, -100, 0]}
 				rotation={[0, 0, 0]}
 				zoom={1}
 				scale={100}

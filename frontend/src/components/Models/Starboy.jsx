@@ -84,6 +84,24 @@ export const Starboy = (props) => {
 				},
 				'<', // Starts at the same time as position
 			)
+			.to(starboyref.current.position, {
+				x: 0,
+				y: 10,
+				z: 0,
+				duration: 1,
+				ease: 'power2.inOut',
+			})
+			.to(
+				starboyref.current.scale,
+				{
+					x: 1,
+					y: 1,
+					z: 1,
+					duration: 1,
+					ease: 'power2.inOut',
+				},
+				'<', // Starts at the same time as position
+			)
 	}, [])
 
 	console.log('ref.current.rotation', ref.current?.rotation)
