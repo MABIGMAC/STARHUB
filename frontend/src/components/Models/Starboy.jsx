@@ -28,7 +28,7 @@ export const Starboy = (props) => {
 		tl.current
 			.to(starboyref.current.position, {
 				x: -10,
-				y: -30,
+				y: -38,
 				z: 0,
 				duration: 1,
 				ease: 'power2.inOut',
@@ -36,9 +36,9 @@ export const Starboy = (props) => {
 			.to(
 				starboyref.current.scale,
 				{
-					x: 5,
-					y: 5,
-					z: 5,
+					x: 10,
+					y: 10,
+					z: 10,
 					duration: 1,
 					ease: 'power2.inOut',
 				},
@@ -66,7 +66,7 @@ export const Starboy = (props) => {
 				starboyref.current.position,
 				{
 					x: 20,
-					y: -30,
+					y: -50,
 					z: 0,
 					duration: 1,
 					ease: 'power2.inOut',
@@ -76,9 +76,9 @@ export const Starboy = (props) => {
 			.to(
 				starboyref.current.scale,
 				{
-					x: 20,
-					y: 20,
-					z: 20,
+					x: 45,
+					y: 45,
+					z: 45,
 					duration: 1,
 					ease: 'power2.inOut',
 				},
@@ -112,10 +112,10 @@ export const Starboy = (props) => {
 				ref={starboyref}
 				object={scene}
 				{...props}
-				position={[11.5, -5, -45]}
+				position={[10, -7, -45]}
 				rotation={[0, 0, 0]}
 				zoom={1}
-				scale={1}
+				scale={2.8}
 				dispose={null}
 			/>
 		</group>
